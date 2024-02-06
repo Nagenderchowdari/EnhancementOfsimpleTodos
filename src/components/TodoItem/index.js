@@ -5,17 +5,18 @@ const TodoItem = props => {
   const {todoDetails, deleteTodo} = props
   const {id, title} = todoDetails
 
-  const onDelete = () => {
+  const onDeleteTodo = () => {
     deleteTodo(id)
   }
 
   return (
     <li className="todo-item">
-      <p>{title}</p>
-      <button type="button" className="delete-btn" onClick={onDelete}>
+      <p className="title">{title}</p>
+      <button type="button" className="delete-btn" onClick={onDeleteTodo}>
         Delete
       </button>
     </li>
   )
 }
+
 export default TodoItem
